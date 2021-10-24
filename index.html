@@ -97,15 +97,16 @@
 
     let mathematics = []; //empty array for calculations
     let history = []; //empty array for previous calculation
+    let reset = false;
 
     const number = (theButton) => {
       //function for 1 through 9
       if (topText.innerHTML === "Press the buttons") {
         topText.innerHTML = theButton; //do nothing if just cleared
-      } else if (history.length === 1 && bottomText.innerHTML === "") {
+      } else if (history.length === 1 && reset) {
         //checks if a calculation was just made
-        // pushes top text to bottom
         topText.innerHTML = theButton; // restarts for a new number
+        reset = false
       } else {
         topText.innerHTML = topText.innerHTML + theButton; //continually adds new numbers
       }
@@ -121,29 +122,33 @@
         bottomText.innerHTML =
           bottomText.innerHTML + topText.innerHTML + " " + theOtherButton; //displays the button pressed and the number in the bottom row
         topText.innerHTML = " "; //resets top text display
+        reset = false
       }
     };
 
     const clearIt = () => {
       topText.innerHTML = "Press the buttons";
       bottomText.innerHTML = "";
+      document.getElementById("bottomInputTwo").innerHTML = "";
       mathematics = [];
       history = [];
+      reset = false
     };
 
     const equality = () => {
       if (mathematics.length === 0) {
         console.log("did nothing"); //do nothing
       } else {
-        mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
+        mathematics.push(parseFloat(topText.innerHTML).toFixed(7)); //logs previous number to array
         let y = mathematics.toString();
         console.log(y); //check for correct string
         let z = y.replace(/,/g, " "); //replace commas in string to space
-        bottomText.innerHTML = ""; //resets top text
-        topText.innerHTML = ""; //replaces bottom text with the evaluated value of the array's string
+        bottomText.innerHTML = ""; //resets bottom text
+        topText.innerHTML = eval(z); //replaces top text with the evaluated value of the array's string
         history[0] = eval(z); //adds one item for history
         document.getElementById("bottomInputTwo").innerHTML = history[0];
         mathematics = []; //resets array for new calculation
+        reset = true
       }
     };
 
