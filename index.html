@@ -144,8 +144,8 @@
         console.log(y); //check for correct string
         let z = y.replace(/,/g, " "); //replace commas in string to space
         bottomText.innerHTML = ""; //resets bottom text
-        topText.innerHTML = eval(z); //replaces top text with the evaluated value of the array's string
-        history[0] = eval(z); //adds one item for history
+        topText.innerHTML = eval(z).toFixed(7); //replaces top text with the evaluated value of the array's string
+        history[0] = eval(z).toFixed(7); //adds one item for history
         document.getElementById("bottomInputTwo").innerHTML = history[0];
         mathematics = []; //resets array for new calculation
         reset = true
