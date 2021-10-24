@@ -139,8 +139,8 @@
         let y = mathematics.toString();
         console.log(y); //check for correct string
         let z = y.replace(/,/g, " "); //replace commas in string to space
-        bottomText.innerHTML = ""; //resets bottom text
-        topText.innerHTML = eval(z); //replaces bottom text with the evaluated value of the array's string
+        bottomText.innerHTML = ""; //resets top text
+        topText.innerHTML = ""; //replaces bottom text with the evaluated value of the array's string
         history[0] = eval(z); //adds one item for history
         document.getElementById("bottomInputTwo").innerHTML = history[0];
         mathematics = []; //resets array for new calculation
