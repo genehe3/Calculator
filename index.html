@@ -116,6 +116,8 @@
       //function for , + , * , /
       if (topText.innerHTML === "Press the buttons") {
         console.log("did nothing"); //do nothing
+      } else if (mathematics.length === 2) {
+        //do nothing
       } else {
         mathematics.push(parseFloat(topText.innerHTML)); //parses top row and logs it into array
         mathematics.push(theOtherButton); //logs the operator pressed
