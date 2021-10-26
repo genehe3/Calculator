@@ -138,15 +138,8 @@
     };
 
     const equality = () => {
-      if (mathematics.length === 0) {
+      if (mathematics.length === 0 || topText.innerHTML === " ") {
         console.log("did nothing"); //do nothing
-      } else if (topText.innerHTML === " ") {
-        console.log("did nothing"); // do nothing
-      } else if (mathematics[mathematics.length - 1] === "/" && mathematics[mathematics.length - 2] === "0") {
-        topText.innerHTML = " "//reset top 
-        bottomText.innerHTML = " "//reset bottom
-        history[0] = "undefined" //return undefined
-        document.getElementById("bottomInputTwo").innerHTML = history[0]; //displays nil
       } else {
         mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
         let y = mathematics.toString();
