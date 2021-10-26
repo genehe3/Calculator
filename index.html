@@ -143,7 +143,7 @@
       } else if (topText.innerHTML = "") {
         console.log("did nothing"); // do nothing
       } else {
-        mathematics.push(parseFloat(topText.innerHTML).toFixed(7)); //logs previous number to array
+        mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
         let y = mathematics.toString();
         console.log(y); //check for correct string
         let z = y.replace(/,/g, " "); //replace commas in string to space
@@ -155,7 +155,5 @@
         reset = true
       }
     };
-
-    const undo = () => {};
   </script>
 </html>
