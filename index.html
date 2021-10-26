@@ -142,7 +142,7 @@
         console.log("did nothing"); //do nothing
       } else if (topText.innerHTML === " ") {
         console.log("did nothing"); // do nothing
-      } else if (mathematics[1] === "/" || mathematics[2] === "0") {
+      } else if (mathematics[mathematics.length - 1] === "/" || mathematics[mathematics.length - 2] === "0") {
         top.innerHTML = " "//reset top 
         bottomText.innerHTML = " "//reset bottom
         history[0] = nil //return undefined
