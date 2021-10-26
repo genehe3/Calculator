@@ -123,7 +123,7 @@
         mathematics.push(theOtherButton); //logs the operator pressed
         bottomText.innerHTML =
           bottomText.innerHTML + topText.innerHTML + " " + theOtherButton; //displays the button pressed and the number in the bottom row
-        topText.innerHTML = ""; //resets top text display
+        topText.innerHTML = " "; //resets top text display
         reset = false
       }
     };
@@ -140,14 +140,14 @@
     const equality = () => {
       if (mathematics.length === 0) {
         console.log("did nothing"); //do nothing
-      } else if (topText.innerHTML = "") {
+      } else if (topText.innerHTML = " ") {
         console.log("did nothing"); // do nothing
       } else {
         mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
         let y = mathematics.toString();
         console.log(y); //check for correct string
         let z = y.replace(/,/g, " "); //replace commas in string to space
-        bottomText.innerHTML = ""; //resets bottom text
+        bottomText.innerHTML = " "; //resets bottom text
         topText.innerHTML = eval(z); //replaces top text with the evaluated value of the array's string
         history[0] = eval(z); //adds one item for history
         document.getElementById("bottomInputTwo").innerHTML = history[0];
