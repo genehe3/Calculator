@@ -142,6 +142,11 @@
         console.log("did nothing"); //do nothing
       } else if (topText.innerHTML === " ") {
         console.log("did nothing"); // do nothing
+      } else if (mathematics[1] === "/" || mathematics[2] === "0") {
+        top.innerHTML = " "//reset top 
+        bottomText.innerHTML = " "//reset bottom
+        history[0] = nil //return undefined
+        document.getElementById("bottomInputTwo").innerHTML = history[0]; //displays nil
       } else {
         mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
         let y = mathematics.toString();
