@@ -145,7 +145,7 @@
       } else if (mathematics[mathematics.length - 1] === "/" || mathematics[mathematics.length - 2] === "0") {
         top.innerHTML = " "//reset top 
         bottomText.innerHTML = " "//reset bottom
-        history[0] = nil //return undefined
+        history[0] = "undefined" //return undefined
         document.getElementById("bottomInputTwo").innerHTML = history[0]; //displays nil
       } else {
         mathematics.push(parseFloat(topText.innerHTML)); //logs previous number to array
