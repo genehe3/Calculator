@@ -101,7 +101,7 @@
 
     const number = (theButton) => {
       //function for 1 through 9
-      if (topText.innerHTML === "Press the buttons") {
+      if (topText.innerHTML.length === 0) {
         topText.innerHTML = theButton; //do nothing if just cleared
       } else if (history.length === 1 && reset) {
         //checks if a calculation was just made
