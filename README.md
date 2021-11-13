@@ -7,4 +7,3 @@ Though it seems basic at first, I had a hard time figuring out how to log what t
 This took two attempts due to my failure to use CCS (styling) in the way I wanted.
 
 Website: https://calculatorv2.netlify.app/ 
-
