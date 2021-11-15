@@ -15,7 +15,7 @@ table {
 button {
   text-align: center;
   width: 100%;
-  height: 80px;
+  height: 50px;
   font-size: calc(2vh + 20px);
   background-color: #2f4562;
   border-radius: 6px;
@@ -25,6 +25,8 @@ body {
   background-color: #081b33;
 }
 
-#text {
-  height: minmax(75px, auto);
+#input {
+  height: 150px;
+  font-size: calc(2vh + 50px);
+  word-wrap: break-word;
 }
