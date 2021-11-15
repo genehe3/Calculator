@@ -27,6 +27,6 @@ body {
 
 #input {
   height: 150px;
-  font-size: calc(2vh + 50px);
+  font-size: calc(4rem);
   word-wrap: break-word;
 }
