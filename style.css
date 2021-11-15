@@ -1,7 +1,7 @@
 h1 {
   border: 5px solid #2f4562;
   height: 75px;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 12px;
@@ -26,7 +26,6 @@ body {
 }
 
 #input {
-  height: 150px;
-  font-size: calc(4rem);
+  height: auto;
   word-wrap: break-word;
 }
